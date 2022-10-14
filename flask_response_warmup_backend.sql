@@ -28,7 +28,7 @@ CREATE TABLE `pokemon` (
   `description` varchar(100) COLLATE utf8mb4_bin DEFAULT NULL,
   `image_url` varchar(1000) COLLATE utf8mb4_bin DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `pokemon` (
 
 LOCK TABLES `pokemon` WRITE;
 /*!40000 ALTER TABLE `pokemon` DISABLE KEYS */;
-INSERT INTO `pokemon` VALUES (1,'Charmander','Fire pokemon','https://static.wikia.nocookie.net/pyruslords/images/5/56/Charmander.png/revision/latest/scale-to-width-down/170?cb=20140104014638');
+INSERT INTO `pokemon` VALUES (1,'Charmander','Fire pokemon','https://static.wikia.nocookie.net/pyruslords/images/5/56/Charmander.png/revision/latest/scale-to-width-down/170?cb=20140104014638'),(2,'Pikachu','Electric pokemon','https://static.wikia.nocookie.net/pyruslords/images/8/89/Pikachu.jpg/revision/latest/scale-to-width-down/170?cb=20140104012254');
 /*!40000 ALTER TABLE `pokemon` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -56,7 +56,7 @@ UNLOCK TABLES;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `get_all_pokemons`()
 begin
-	select convert(name using utf8), convert(description using utf8), convert(image_url using utf8)
+	select convert(name using utf8), convert(description using utf8), convert(image_url using utf8), id
 	from pokemon;
 END ;;
 DELIMITER ;
@@ -100,4 +100,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-13 16:38:57
+-- Dump completed on 2022-10-13 18:54:56
