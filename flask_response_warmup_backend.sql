@@ -32,16 +32,6 @@ CREATE TABLE `pokemon` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `pokemon`
---
-
-LOCK TABLES `pokemon` WRITE;
-/*!40000 ALTER TABLE `pokemon` DISABLE KEYS */;
-INSERT INTO `pokemon` VALUES (1,'Charmander','Fire pokemon','https://static.wikia.nocookie.net/pyruslords/images/5/56/Charmander.png/revision/latest/scale-to-width-down/170?cb=20140104014638'),(2,'Pikachu','Electric pokemon','https://static.wikia.nocookie.net/pyruslords/images/8/89/Pikachu.jpg/revision/latest/scale-to-width-down/170?cb=20140104012254');
-/*!40000 ALTER TABLE `pokemon` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Dumping routines for database 'flask_response_warmup_backend'
 --
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
@@ -100,4 +90,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-13 18:54:56
+-- Dump completed on 2022-10-15 10:11:45
